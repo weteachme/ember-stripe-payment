@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 # Ember-stripe-payment
+
+Wrapper for Stripe jquery.payment
 
 This README outlines the details of collaborating on this Ember addon.
 
@@ -25,7 +26,3 @@ This README outlines the details of collaborating on this Ember addon.
 * `ember build`
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
-=======
-# ember-stripe-payment
-Wrapper for Stripe jquery.payment
->>>>>>> cabd9430f4b4f37b1bae161154ea21d0ea074b03
