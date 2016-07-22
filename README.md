@@ -3,8 +3,8 @@
 Wrapper for Stripe jquery.payment
 
 ## Install
-`ember install https://github.com/weteachme/ember-stripe-payment.git`
-`ember generate ember-stripe-payment`
+- `ember install https://github.com/weteachme/ember-stripe-payment.git`
+- `ember generate ember-stripe-payment`
 
 ## Usage
 Validate credit card.
