@@ -10,8 +10,8 @@ const {
   isEmpty,
   assert,
   getProperties,
-  $
 } = Ember;
+import $ from 'jquery';
 
 /**
  *  Validate credit card.
@@ -55,6 +55,7 @@ export default Base.extend({
     }
 
     if(type === 'expiry') {
+      value = value === undefined ? '' : value;
       const [ month, year ] = value.split(divider);
       if(!$.payment.validateCardExpiry(month, year)) {
         return this.createErrorMessage(type || 'invalid', value, options);
