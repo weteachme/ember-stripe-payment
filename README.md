@@ -2,27 +2,33 @@
 
 Wrapper for Stripe jquery.payment
 
-This README outlines the details of collaborating on this Ember addon.
+## Install
+`ember install https://github.com/weteachme/ember-stripe-payment.git`
 
-## Installation
+## Usage
+Validate credit card.
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+#### Options
+- `type` (**String**): Can be the one of the following options [`number`, `expiry`, `cvc`]
+- `divider` (**String**): Divider used for expiry. e.g. '/' or '-'
+- `card-type` (**String**): Can be the one of the following options [`visa`, `mastercard`, `amex`]
 
-## Running
+```javascript
+// Examples
+validator('credit-card', {
+  type: 'number'
+})
+validator('credit-card', {
+  type: 'expiry',
+  divider: '/'
+})
+validator('credit-card', {
+  type: 'cvc',
+  'card-type': 'amex'
+})
+validator('credit-card', {
+    type: 'number',
+    message: 'Card number is invalid.'
+})
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
