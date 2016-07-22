@@ -37,8 +37,7 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
-    "loader.js": "^4.0.1",
-    "jquery.payment": "1.4.3"
+    "loader.js": "^4.0.1"
   },
   "keywords": [
     "ember-addon",
@@ -50,5 +49,14 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weteachme/ember-stripe-payment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/weteachme/ember-stripe-payment/issues"
+  },
+  "homepage": "https://github.com/weteachme/ember-stripe-payment"
 }
