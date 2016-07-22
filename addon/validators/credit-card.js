@@ -9,7 +9,8 @@ import Base from 'ember-cp-validations/validators/base';
 const {
   isEmpty,
   assert,
-  getProperties
+  getProperties,
+  $
 } = Ember;
 
 /**
@@ -49,18 +50,18 @@ export default Base.extend({
 
     assert(`[ember-cp-validations] [validator:credit-card] [${attribute}] no options were passed in`, !isEmpty(Object.keys(options)));
 
-    if(type === 'number' && !Ember.$.payment.validateCardNumber(value)) {
+    if(type === 'number' && !$.payment.validateCardNumber(value)) {
       return this.createErrorMessage(type || 'invalid', value, options);
     }
 
     if(type === 'expiry') {
       const [ month, year ] = value.split(divider);
-      if(!Ember.$.payment.validateCardExpiry(month, year)) {
+      if(!$.payment.validateCardExpiry(month, year)) {
         return this.createErrorMessage(type || 'invalid', value, options);
       }
     }
 
-    if(type === 'cvc' && !Ember.$.payment.validateCardCVC(value, cardType)) {
+    if(type === 'cvc' && !$.payment.validateCardCVC(value, cardType)) {
       return this.createErrorMessage(type || 'invalid', value, options);
     }
 
