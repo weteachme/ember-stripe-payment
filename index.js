@@ -13,7 +13,9 @@ module.exports = {
 
     this.app = app;
 
-    app.import(app.bowerDirectory + '/jquery.payment/lib/jquery.payment.min.js');
+    if (!process.env.EMBER_CLI_FASTBOOT) {
+      app.import(app.bowerDirectory + '/jquery.payment/lib/jquery.payment.min.js');
+    }
 
     return app;
   }
